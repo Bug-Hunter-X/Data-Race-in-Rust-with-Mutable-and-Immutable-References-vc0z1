@@ -1,0 +1,3 @@
+# Data Race in Rust with Mutable and Immutable References
+
+This repository demonstrates a potential data race in Rust that arises when mutable and immutable references to the same variable coexist without appropriate synchronization mechanisms. The bug.rs file contains the erroneous code, while bugSolution.rs provides a corrected version. The issue stems from the simultaneous presence of both `&mut x` and `&x`, leading to undefined behavior.  The solution employs techniques like cloning or using a mutex to prevent the race condition.
